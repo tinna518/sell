@@ -107,12 +107,15 @@ export default {
                             background: rgb(0, 160, 220);
                         }
                         .icon-shopping_cart{
+                            display: inline-block;
+                            width: 100%;
+                            height: 100%;
                             line-height: 44px;
                             font-size: 24px;
                             color: #80858a;
                             &.highlight{
                             color: #fff;
-                             }                     
+                             }
                         }
                     }
                     .num{
@@ -144,7 +147,7 @@ export default {
                     color:rgba(255, 255, 255, 0.4);
                     &.highlight{
                         color: #fff;
-                    }            
+                    }
                 }
                 .desc{
                     display:inline-block;

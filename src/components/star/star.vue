@@ -1,6 +1,6 @@
 <template>
     <div class="star" :class="starType">
-        <span v-for="itemCless  in itemClesses"  :class="itemCless" class="star-item"></span>
+        <span v-for="itemCless  in itemClesses" :key="itemCless" :class="itemCless" class="star-item"></span>
     </div>
 </template>
 
@@ -24,9 +24,8 @@ export default {
     },
     itemClesses () {
       let result = []
-      let score = Math.floor(this.score * 2) / 2
-      let hasDecimal = score % 1 !== 0
-      let integer = Math.floor(score)
+      let hasDecimal = this.score % 1 !== 0
+      let integer = Math.floor(this.score)
       for (let i = 0; i < integer; i++) {
         result.push(CLS_ON)
       }
